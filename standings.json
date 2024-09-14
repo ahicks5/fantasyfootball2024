@@ -1,0 +1,158 @@
+[
+    [
+        "you goedert dude",
+        {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "PF": 150.96,
+            "PA": 92.86,
+            "streak": "W-1",
+            "expected_wins": 1.0,
+            "expected_losses": 0.0
+        }
+    ],
+    [
+        "HockenZYN",
+        {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "PF": 140.98,
+            "PA": 127.18,
+            "streak": "W-1",
+            "expected_wins": 0.9090909090909091,
+            "expected_losses": 0.09090909090909091
+        }
+    ],
+    [
+        "AGREATCHAOS",
+        {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "PF": 134.28,
+            "PA": 110.22,
+            "streak": "W-1",
+            "expected_wins": 0.8181818181818182,
+            "expected_losses": 0.18181818181818182
+        }
+    ],
+    [
+        "J.K.K.K. Dobbins",
+        {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "PF": 127.98,
+            "PA": 92.89999999999999,
+            "streak": "W-1",
+            "expected_wins": 0.7272727272727273,
+            "expected_losses": 0.2727272727272727
+        }
+    ],
+    [
+        "Jonastys Fantasy",
+        {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "PF": 124.16,
+            "PA": 85.06,
+            "streak": "W-1",
+            "expected_wins": 0.5454545454545454,
+            "expected_losses": 0.45454545454545453
+        }
+    ],
+    [
+        "Obi-Jan Kenobi",
+        {
+            "wins": 1,
+            "losses": 0,
+            "ties": 0,
+            "PF": 92.74,
+            "PA": 79.12,
+            "streak": "W-1",
+            "expected_wins": 0.18181818181818182,
+            "expected_losses": 0.8181818181818182
+        }
+    ],
+    [
+        "Danny Dimes's Crack Dealer",
+        {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "PF": 127.18,
+            "PA": 140.98,
+            "streak": "L-1",
+            "expected_wins": 0.6363636363636364,
+            "expected_losses": 0.36363636363636365
+        }
+    ],
+    [
+        "Sanduskys Tight Ends",
+        {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "PF": 110.22,
+            "PA": 134.28,
+            "streak": "L-1",
+            "expected_wins": 0.45454545454545453,
+            "expected_losses": 0.5454545454545454
+        }
+    ],
+    [
+        "Alexander's Amazing Team",
+        {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "PF": 92.89999999999999,
+            "PA": 127.98,
+            "streak": "L-1",
+            "expected_wins": 0.36363636363636365,
+            "expected_losses": 0.6363636363636364
+        }
+    ],
+    [
+        "The Sleepy Joes",
+        {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "PF": 92.86,
+            "PA": 150.96,
+            "streak": "L-1",
+            "expected_wins": 0.2727272727272727,
+            "expected_losses": 0.7272727272727273
+        }
+    ],
+    [
+        "Butkers Stay At Home Moms",
+        {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "PF": 85.06,
+            "PA": 124.16,
+            "streak": "L-1",
+            "expected_wins": 0.09090909090909091,
+            "expected_losses": 0.9090909090909091
+        }
+    ],
+    [
+        "Make Fantasy Great Again",
+        {
+            "wins": 0,
+            "losses": 1,
+            "ties": 0,
+            "PF": 79.12,
+            "PA": 92.74,
+            "streak": "L-1",
+            "expected_wins": 0.0,
+            "expected_losses": 1.0
+        }
+    ]
+]

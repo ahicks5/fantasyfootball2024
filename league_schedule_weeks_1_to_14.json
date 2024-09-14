@@ -1,0 +1,366 @@
+{
+    "1": [
+        {
+            "team1_id": "9",
+            "team2_id": "1"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "4"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "6",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "7",
+            "team2_id": "12"
+        }
+    ],
+    "2": [
+        {
+            "team1_id": "9",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "8",
+            "team2_id": "11"
+        }
+    ],
+    "3": [
+        {
+            "team1_id": "9",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "7",
+            "team2_id": "10"
+        }
+    ],
+    "4": [
+        {
+            "team1_id": "9",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "2"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "6",
+            "team2_id": "7"
+        }
+    ],
+    "5": [
+        {
+            "team1_id": "9",
+            "team2_id": "2"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "4"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "7",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "10",
+            "team2_id": "12"
+        }
+    ],
+    "6": [
+        {
+            "team1_id": "9",
+            "team2_id": "4"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "6",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "8",
+            "team2_id": "12"
+        }
+    ],
+    "7": [
+        {
+            "team1_id": "9",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "3"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "6",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "10",
+            "team2_id": "11"
+        }
+    ],
+    "8": [
+        {
+            "team1_id": "9",
+            "team2_id": "3"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "6",
+            "team2_id": "11"
+        }
+    ],
+    "9": [
+        {
+            "team1_id": "9",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "4"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "7",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "11",
+            "team2_id": "12"
+        }
+    ],
+    "10": [
+        {
+            "team1_id": "9",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "10"
+        }
+    ],
+    "11": [
+        {
+            "team1_id": "9",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "3"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "8",
+            "team2_id": "10"
+        }
+    ],
+    "12": [
+        {
+            "team1_id": "9",
+            "team2_id": "1"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "4"
+        },
+        {
+            "team1_id": "5",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "6",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "7",
+            "team2_id": "12"
+        }
+    ],
+    "13": [
+        {
+            "team1_id": "9",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "7"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "10"
+        },
+        {
+            "team1_id": "8",
+            "team2_id": "11"
+        }
+    ],
+    "14": [
+        {
+            "team1_id": "9",
+            "team2_id": "5"
+        },
+        {
+            "team1_id": "1",
+            "team2_id": "8"
+        },
+        {
+            "team1_id": "2",
+            "team2_id": "11"
+        },
+        {
+            "team1_id": "3",
+            "team2_id": "12"
+        },
+        {
+            "team1_id": "4",
+            "team2_id": "6"
+        },
+        {
+            "team1_id": "7",
+            "team2_id": "10"
+        }
+    ]
+}
