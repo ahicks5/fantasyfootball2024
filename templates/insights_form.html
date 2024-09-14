@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week {{ week_num }} Insights</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .overperformed {
+            background-color: rgba(40, 167, 69, 0.2);
+        }
+
+        .underperformed {
+            background-color: rgba(220, 53, 69, 0.2);
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .chart-container {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Fantasy Football Insights - Week {{ week_num }}</h1>
+
+    {% if insights %}
+        <!-- Section for Overperforming Teams with Contributors -->
+        <div class="section mb-4">
+            <h2>Top Overperformers and Key Contributors</h2>
+            <div class="table-container">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Actual Points</th>
+                        <th>Projected Points</th>
+                        <th>Difference</th>
+                        <th>Top Contributors</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in insights['biggest_pos_diff'] %}
+                        <tr class="overperformed">
+                            <td>{{ item['team_name'] }}</td>
+                            <td>{{ item['actual_fantasy_points'] | round(1) }}</td>
+                            <td>{{ item['projected_fantasy_points'] | round(1) }}</td>
+                            <td>{{ item['points_diff'] | round(1) }}</td>
+                            <td>
+                                <ul>
+                                    {% for contributor in insights['top_positive_contributors'] if contributor['team_name'] == item['team_name'] %}
+                                        <li>{{ contributor['player_name'] }} ({{ contributor['position'] }}): {{ contributor['actual_fantasy_points'] | round(1) }} pts</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart-container">
+                <canvas id="overperformersChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Section for Underperforming Teams with Contributors -->
+        <div class="section mb-4">
+            <h2>Top Underperformers and Key Contributors</h2>
+            <div class="table-container">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Actual Points</th>
+                        <th>Projected Points</th>
+                        <th>Difference</th>
+                        <th>Top Contributors</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in insights['biggest_neg_diff'] %}
+                        <tr class="underperformed">
+                            <td>{{ item['team_name'] }}</td>
+                            <td>{{ item['actual_fantasy_points'] | round(1) }}</td>
+                            <td>{{ item['projected_fantasy_points'] | round(1) }}</td>
+                            <td>{{ item['points_diff'] | round(1) }}</td>
+                            <td>
+                                <ul>
+                                    {% for contributor in insights['top_negative_contributors'] if contributor['team_name'] == item['team_name'] %}
+                                        <li>{{ contributor['player_name'] }} ({{ contributor['position'] }}): {{ contributor['actual_fantasy_points'] | round(1) }} pts</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart-container">
+                <canvas id="underperformersChart"></canvas>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Data for Overperformers Chart
+            const overperformersData = {
+                labels: [
+                    {% for item in insights['biggest_pos_diff'] %}
+                    "{{ item['team_name'] | safe }}",
+                    {% endfor %}
+                ],
+                datasets: [{
+                    label: 'Points Difference',
+                    data: [
+                        {% for item in insights['biggest_pos_diff'] %}
+                        {{ item['points_diff'] | round(1) }},
+                        {% endfor %}
+                    ],
+                    backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                    borderColor: 'rgba(40, 167, 69, 1)',
+                    borderWidth: 1
+                }]
+            };
+
+            // Data for Underperformers Chart
+            const underperformersData = {
+                labels: [
+                    {% for item in insights['biggest_neg_diff'] %}
+                    "{{ item['team_name'] | safe }}",
+                    {% endfor %}
+                ],
+                datasets: [{
+                    label: 'Points Difference',
+                    data: [
+                        {% for item in insights['biggest_neg_diff'] %}
+                        {{ item['points_diff'] | round(1) }},
+                        {% endfor %}
+                    ],
+                    backgroundColor: 'rgba(220, 53, 69, 0.2)',
+                    borderColor: 'rgba(220, 53, 69, 1)',
+                    borderWidth: 1
+                }]
+            };
+
+            // Render Overperformers Chart
+            const ctxOver = document.getElementById('overperformersChart').getContext('2d');
+            const overperformersChart = new Chart(ctxOver, {
+                type: 'bar',
+                data: overperformersData,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Difference: ' + context.parsed.y.toFixed(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Render Underperformers Chart
+            const ctxUnder = document.getElementById('underperformersChart').getContext('2d');
+            const underperformersChart = new Chart(ctxUnder, {
+                type: 'bar',
+                data: underperformersData,
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return 'Difference: ' + context.parsed.y.toFixed(1);
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+
+    {% else %}
+        <p class="text-center text-muted">No insights available for the selected week.</p>
+    {% endif %}
+</div>
+
+<footer>
+    <p>&copy; 2024 Fantasy Football Insights. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

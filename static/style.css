@@ -1,0 +1,127 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px; /* Increased width to accommodate larger charts */
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 50px;
+    color: #34495e;
+}
+
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    margin-top: 50px;
+    color: #34495e;
+}
+
+.section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.section table {
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* Chart Container Styles */
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust to your desired chart height */
+    margin-bottom: 50px; /* Optional spacing between charts */
+}
+
+/* Canvas Styles */
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%; /* Canvas fills the container */
+    margin: 0 auto;
+}
+
+/* Form Styles (if any forms are present) */
+form {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 60px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ABD;
+}

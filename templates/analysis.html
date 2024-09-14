@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results - Week {{ analysis.week_num }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Include Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results - Week {{ analysis.week_num }}</h1>
+        <a href="{{ url_for('index') }}">Back to Home</a>
+
+        {% if analysis %}
+            <!-- Manager Lineup Score Section -->
+            <div class="section">
+                <h2>Manager Lineup Score</h2>
+                <p>
+                    <strong>Description:</strong> The Manager Lineup Score is a comprehensive score out of 100 that evaluates the manager's effectiveness in setting their lineup. It combines several metrics to provide an overall assessment.
+                </p>
+                <p>
+                    <strong>Interpretation:</strong> Higher scores indicate better managerial decisions. A score closer to 100 suggests that the manager made excellent lineup choices, effectively maximizing their team's potential.
+                </p>
+                <p>
+                    <strong>Factors Affecting the Score:</strong> The score considers lineup efficiency, overperformance, average percent difference, percentage of players who beat projections, percentage of players who boomed, and percentage of players who busted.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team Name</th>
+                            <th>Lineup Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team_name, score in analysis.rankings.manager_lineup_score %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ team_name }}</td>
+                            <td>{{ score | round(2) }}/100</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="lineupScoreChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Lineup Efficiency Section -->
+            <div class="section">
+                <h2>Lineup Efficiency</h2>
+                <p>
+                    <strong>Description:</strong> Lineup Efficiency measures how close the manager's chosen lineup was to the optimal actual lineup (the best possible lineup based on actual player performances).
+                </p>
+                <p>
+                    <strong>Interpretation:</strong> A higher percentage indicates better lineup decisions. Values close to 100% are ideal, showing that the manager nearly maximized their team's potential.
+                </p>
+                <p>
+                    <strong>Factors Affecting Efficiency:</strong> Lineup efficiency is affected by how well the manager predicted which players would perform best. Leaving high-scoring players on the bench reduces efficiency.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team Name</th>
+                            <th>Efficiency (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team_name, efficiency in analysis.rankings.lineup_efficiency %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ team_name }}</td>
+                            <td>{{ efficiency | round(2) }}%</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="lineupEfficiencyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Overperformance Section -->
+            <div class="section">
+                <h2>Overperformance</h2>
+                <p>
+                    <strong>Description:</strong> Overperformance is the difference between the chosen lineup's actual points and the projected points. It indicates how much the team exceeded or fell short of expectations.
+                </p>
+                <p>
+                    <strong>Interpretation:</strong> Positive values suggest the team performed better than expected, possibly due to players exceeding projections. Negative values indicate underperformance.
+                </p>
+                <p>
+                    <strong>Factors Affecting Overperformance:</strong> Overperformance is influenced by individual players outperforming or underperforming their projections due to various factors like matchups, injuries, or unexpected events.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team Name</th>
+                            <th>Overperformance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team_name, overperf in analysis.rankings.overperformance %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ team_name }}</td>
+                            <td>{{ overperf | round(2) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="overperformanceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Average Percent Difference Section -->
+            <div class="section">
+                <h2>Average Percent Difference Between Actual and Projected Points</h2>
+                <p>
+                    <strong>Description:</strong> This metric calculates the average percentage difference between players' actual points and their projected points in the chosen lineup.
+                </p>
+                <p>
+                    <strong>Interpretation:</strong> Higher positive values indicate that, on average, players significantly exceeded their projections. Negative values mean players underperformed relative to expectations.
+                </p>
+                <p>
+                    <strong>Factors Affecting the Metric:</strong> This metric is influenced by the overall performance of players in the lineup compared to their projections.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team Name</th>
+                            <th>Average Percent Difference (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team_name, avg_diff in analysis.rankings.average_percent_difference %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ team_name }}</td>
+                            <td>{{ avg_diff | round(2) }}%</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="avgPercentDifferenceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Percentage of Players Who Beat Projections Section -->
+            <div class="section">
+                <h2>Percentage of Players Who Beat Projections</h2>
+                <p>
+                    <strong>Description:</strong> This metric shows the percentage of players in the chosen lineup who scored more than their projected points.
+                </p>
+                <p>
+                    <strong>Interpretation:</strong> Higher percentages indicate better overall player performance and potentially good managerial decisions in player selection.
+                </p>
+                <p>
+                    <strong>Factors Affecting the Metric:</strong> This depends on individual player performances relative to their projections.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team Name</th>
+                            <th>Percent of Players Beating Projections (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team_name, percent in analysis.rankings.percent_players_beat_projection %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ team_name }}</td>
+                            <td>{{ percent | round(2) }}%</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="percentPlayersBeatProjectionChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Points Left on Bench Section -->
+            <div class="section">
+                <h2>Points Left on Bench</h2>
+                <p>
+                    <strong>Description:</strong> This metric represents the difference between the optimal actual lineup's points and the chosen lineup's points. It indicates how many points the manager missed out on.
+                </p>
+                <p>
+                    <strong>Interpretation:</strong> Lower values are better, suggesting that the manager made lineup decisions close to the optimal. High values indicate significant points were left on the bench.
+                </p>
+                <p>
+                    <strong>Factors Affecting the Metric:</strong> This is affected by the performance of bench players compared to starters.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team Name</th>
+                            <th>Points Left on Bench</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team_name, points_diff in analysis.rankings.chosen_vs_optimal_actual %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ team_name }}</td>
+                            <td>{{ points_diff | round(2) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div class="chart-container">
+                    <canvas id="pointsLeftOnBenchChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Include scripts to render charts -->
+            <script>
+                // Function to generate chart data
+                function generateChartData(labels, data, label, backgroundColor) {
+                    return {
+                        labels: labels,
+                        datasets: [{
+                            label: label,
+                            data: data,
+                            backgroundColor: backgroundColor,
+                        }]
+                    };
+                }
+
+                // Function to render chart
+                function renderChart(ctxId, chartData, options) {
+                    const ctx = document.getElementById(ctxId).getContext('2d');
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: chartData,
+                        options: Object.assign({
+                            responsive: true,
+                            maintainAspectRatio: false, // Important for the chart to fill its container
+                        }, options)
+                    });
+                }
+
+                // Manager Lineup Score Chart
+                renderChart('lineupScoreChart', generateChartData(
+                    [{% for team_name, score in analysis.rankings.manager_lineup_score %}"{{ team_name }}",{% endfor %}],
+                    [{% for team_name, score in analysis.rankings.manager_lineup_score %}{{ score | round(2) }},{% endfor %}],
+                    'Lineup Score',
+                    'rgba(54, 162, 235, 0.5)'
+                ), {
+                    scales: {
+                        y: { beginAtZero: true, max: 100 }
+                    }
+                });
+
+                // Lineup Efficiency Chart
+                renderChart('lineupEfficiencyChart', generateChartData(
+                    [{% for team_name, efficiency in analysis.rankings.lineup_efficiency %}"{{ team_name }}",{% endfor %}],
+                    [{% for team_name, efficiency in analysis.rankings.lineup_efficiency %}{{ efficiency | round(2) }},{% endfor %}],
+                    'Lineup Efficiency (%)',
+                    'rgba(75, 192, 192, 0.5)'
+                ), {
+                    scales: {
+                        y: { beginAtZero: true, max: 100 }
+                    }
+                });
+
+                // Overperformance Chart
+                renderChart('overperformanceChart', generateChartData(
+                    [{% for team_name, overperf in analysis.rankings.overperformance %}"{{ team_name }}",{% endfor %}],
+                    [{% for team_name, overperf in analysis.rankings.overperformance %}{{ overperf | round(2) }},{% endfor %}],
+                    'Overperformance',
+                    'rgba(255, 159, 64, 0.5)'
+                ), {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                });
+
+                // Average Percent Difference Chart
+                renderChart('avgPercentDifferenceChart', generateChartData(
+                    [{% for team_name, avg_diff in analysis.rankings.average_percent_difference %}"{{ team_name }}",{% endfor %}],
+                    [{% for team_name, avg_diff in analysis.rankings.average_percent_difference %}{{ avg_diff | round(2) }},{% endfor %}],
+                    'Average Percent Difference (%)',
+                    'rgba(153, 102, 255, 0.5)'
+                ), {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                });
+
+                // Percentage of Players Who Beat Projections Chart
+                renderChart('percentPlayersBeatProjectionChart', generateChartData(
+                    [{% for team_name, percent in analysis.rankings.percent_players_beat_projection %}"{{ team_name }}",{% endfor %}],
+                    [{% for team_name, percent in analysis.rankings.percent_players_beat_projection %}{{ percent | round(2) }},{% endfor %}],
+                    'Percent of Players Beating Projections (%)',
+                    'rgba(255, 206, 86, 0.5)'
+                ), {
+                    scales: {
+                        y: { beginAtZero: true, max: 100 }
+                    }
+                });
+
+                // Points Left on Bench Chart
+                renderChart('pointsLeftOnBenchChart', generateChartData(
+                    [{% for team_name, points_diff in analysis.rankings.chosen_vs_optimal_actual %}"{{ team_name }}",{% endfor %}],
+                    [{% for team_name, points_diff in analysis.rankings.chosen_vs_optimal_actual %}{{ points_diff | round(2) }},{% endfor %}],
+                    'Points Left on Bench',
+                    'rgba(255, 99, 132, 0.5)'
+                ), {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                });
+            </script>
+        {% else %}
+            <p>No analysis data available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

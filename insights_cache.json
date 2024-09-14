@@ -1,0 +1,798 @@
+{
+    "1": {
+        "team_proj_points": [
+            {
+                "team_name": "AGREATCHAOS",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "HockenZYN",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "projected_fantasy_points": 0.0
+            },
+            {
+                "team_name": "you goedert dude",
+                "projected_fantasy_points": 0.0
+            }
+        ],
+        "team_actual_points": [
+            {
+                "team_name": "AGREATCHAOS",
+                "actual_fantasy_points": 134.28
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "actual_fantasy_points": 92.89999999999999
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "actual_fantasy_points": 85.06
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "actual_fantasy_points": 127.18
+            },
+            {
+                "team_name": "HockenZYN",
+                "actual_fantasy_points": 140.98
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "actual_fantasy_points": 127.98
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "actual_fantasy_points": 124.16
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "actual_fantasy_points": 79.12
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "actual_fantasy_points": 92.74000000000001
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "actual_fantasy_points": 110.22
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "actual_fantasy_points": 92.86
+            },
+            {
+                "team_name": "you goedert dude",
+                "actual_fantasy_points": 150.96
+            }
+        ],
+        "biggest_pos_diff": [
+            {
+                "team_name": "you goedert dude",
+                "actual_fantasy_points": 150.96,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 150.96
+            },
+            {
+                "team_name": "HockenZYN",
+                "actual_fantasy_points": 140.98,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 140.98
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "actual_fantasy_points": 134.28,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 134.28
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "actual_fantasy_points": 127.98,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 127.98
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "actual_fantasy_points": 127.18,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 127.18
+            }
+        ],
+        "biggest_neg_diff": [
+            {
+                "team_name": "Make Fantasy Great Again",
+                "actual_fantasy_points": 79.12,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 79.12
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "actual_fantasy_points": 85.06,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 85.06
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "actual_fantasy_points": 92.74000000000001,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 92.74000000000001
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "actual_fantasy_points": 92.86,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 92.86
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "actual_fantasy_points": 92.89999999999999,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 92.89999999999999
+            }
+        ],
+        "bench_points": [
+            {
+                "team_name": "The Sleepy Joes",
+                "actual_fantasy_points": 78.82
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "actual_fantasy_points": 66.08
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "actual_fantasy_points": 60.739999999999995
+            },
+            {
+                "team_name": "you goedert dude",
+                "actual_fantasy_points": 57.980000000000004
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "actual_fantasy_points": 56.3
+            },
+            {
+                "team_name": "HockenZYN",
+                "actual_fantasy_points": 52.8
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "actual_fantasy_points": 46.56
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "actual_fantasy_points": 44.82
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "actual_fantasy_points": 42.58
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "actual_fantasy_points": 39.94
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "actual_fantasy_points": 39.76
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "actual_fantasy_points": 36.0
+            }
+        ],
+        "top_positive_contributors": [
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "player_name": "Saquon Barkley",
+                "position": "RB",
+                "actual_fantasy_points": 33.2,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 33.2
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "player_name": "Jayden Reed",
+                "position": "WR",
+                "actual_fantasy_points": 33.1,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 33.1
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "player_name": "Cooper Kupp",
+                "position": "WR",
+                "actual_fantasy_points": 32.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 32.0
+            },
+            {
+                "team_name": "HockenZYN",
+                "player_name": "Josh Allen",
+                "position": "QB",
+                "actual_fantasy_points": 31.18,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 31.18
+            },
+            {
+                "team_name": "you goedert dude",
+                "player_name": "Baker Mayfield",
+                "position": "QB",
+                "actual_fantasy_points": 29.66,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 29.66
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "player_name": "Anthony Richardson",
+                "position": "QB",
+                "actual_fantasy_points": 27.08,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 27.08
+            },
+            {
+                "team_name": "HockenZYN",
+                "player_name": "Joe Mixon",
+                "position": "RB",
+                "actual_fantasy_points": 26.8,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 26.8
+            },
+            {
+                "team_name": "you goedert dude",
+                "player_name": "Jake Moody",
+                "position": "K",
+                "actual_fantasy_points": 26.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 26.0
+            },
+            {
+                "team_name": "you goedert dude",
+                "player_name": "Tyreek Hill",
+                "position": "WR",
+                "actual_fantasy_points": 26.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 26.0
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "player_name": "Lamar Jackson",
+                "position": "QB",
+                "actual_fantasy_points": 25.12,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 25.12
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "player_name": "Mike Evans",
+                "position": "WR",
+                "actual_fantasy_points": 23.1,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 23.1
+            },
+            {
+                "team_name": "HockenZYN",
+                "player_name": "De'Von Achane",
+                "position": "RB",
+                "actual_fantasy_points": 23.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 23.0
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "player_name": "A.J. Brown",
+                "position": "WR",
+                "actual_fantasy_points": 22.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 22.9
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "player_name": "Alvin Kamara",
+                "position": "RB",
+                "actual_fantasy_points": 22.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 22.0
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "player_name": "Minnesota",
+                "position": "DEF",
+                "actual_fantasy_points": 22.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 22.0
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "player_name": "Stefon Diggs",
+                "position": "WR",
+                "actual_fantasy_points": 21.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 21.9
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "player_name": "Brandon Aubrey",
+                "position": "K",
+                "actual_fantasy_points": 21.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 21.0
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "player_name": "James Conner",
+                "position": "RB",
+                "actual_fantasy_points": 19.3,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 19.3
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "player_name": "Aaron Jones",
+                "position": "RB",
+                "actual_fantasy_points": 18.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.9
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "player_name": "Jerome Ford",
+                "position": "RB",
+                "actual_fantasy_points": 18.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.9
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "player_name": "Kenneth Walker III",
+                "position": "RB",
+                "actual_fantasy_points": 18.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.9
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "player_name": "Deebo Samuel Sr.",
+                "position": "WR",
+                "actual_fantasy_points": 18.7,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.7
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "player_name": "C.J. Stroud",
+                "position": "QB",
+                "actual_fantasy_points": 18.66,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.66
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "player_name": "Jalen Hurts",
+                "position": "QB",
+                "actual_fantasy_points": 18.42,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.42
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "player_name": "Breece Hall",
+                "position": "RB",
+                "actual_fantasy_points": 18.3,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 18.3
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "player_name": "Brian Robinson Jr.",
+                "position": "RB",
+                "actual_fantasy_points": 17.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 17.9
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "player_name": "Jordan Love",
+                "position": "QB",
+                "actual_fantasy_points": 17.4,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 17.4
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "player_name": "Jahmyr Gibbs",
+                "position": "RB",
+                "actual_fantasy_points": 17.4,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 17.4
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "player_name": "Rashee Rice",
+                "position": "WR",
+                "actual_fantasy_points": 17.3,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 17.3
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "player_name": "Dallas",
+                "position": "DEF",
+                "actual_fantasy_points": 17.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 17.0
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "player_name": "Rachaad White",
+                "position": "RB",
+                "actual_fantasy_points": 16.6,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 16.6
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "player_name": "David Montgomery",
+                "position": "RB",
+                "actual_fantasy_points": 16.3,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 16.3
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "player_name": "Jaylen Waddle",
+                "position": "WR",
+                "actual_fantasy_points": 16.2,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 16.2
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "player_name": "Patrick Mahomes",
+                "position": "QB",
+                "actual_fantasy_points": 16.14,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 16.14
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "player_name": "Bijan Robinson",
+                "position": "RB",
+                "actual_fantasy_points": 16.1,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 16.1
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "player_name": "Brock Bowers",
+                "position": "TE",
+                "actual_fantasy_points": 11.8,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 11.8
+            }
+        ],
+        "top_negative_contributors": [
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "player_name": "Tee Higgins",
+                "position": "WR",
+                "actual_fantasy_points": 0.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 0.0
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "player_name": "Christian McCaffrey",
+                "position": "RB",
+                "actual_fantasy_points": 0.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 0.0
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "player_name": "Marvin Harrison Jr.",
+                "position": "WR",
+                "actual_fantasy_points": 1.4,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 1.4
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "player_name": "Chuba Hubbard",
+                "position": "RB",
+                "actual_fantasy_points": 1.4,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 1.4
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "player_name": "Evan Engram",
+                "position": "TE",
+                "actual_fantasy_points": 1.5,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 1.5
+            },
+            {
+                "team_name": "Make Fantasy Great Again",
+                "player_name": "Cincinnati",
+                "position": "DEF",
+                "actual_fantasy_points": 2.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 2.0
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "player_name": "New York",
+                "position": "DEF",
+                "actual_fantasy_points": 2.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 2.0
+            },
+            {
+                "team_name": "you goedert dude",
+                "player_name": "Cleveland",
+                "position": "DEF",
+                "actual_fantasy_points": 2.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 2.0
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "player_name": "Dalton Kincaid",
+                "position": "TE",
+                "actual_fantasy_points": 2.1,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 2.1
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "player_name": "Philadelphia",
+                "position": "DEF",
+                "actual_fantasy_points": 3.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 3.0
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "player_name": "Chris Olave",
+                "position": "WR",
+                "actual_fantasy_points": 3.1,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 3.1
+            },
+            {
+                "team_name": "you goedert dude",
+                "player_name": "Mark Andrews",
+                "position": "TE",
+                "actual_fantasy_points": 3.4,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 3.4
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "player_name": "Drake London",
+                "position": "WR",
+                "actual_fantasy_points": 3.5,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 3.5
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "player_name": "Terry McLaurin",
+                "position": "WR",
+                "actual_fantasy_points": 3.7,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 3.7
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "player_name": "Raheem Mostert",
+                "position": "RB",
+                "actual_fantasy_points": 3.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 3.9
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "player_name": "Younghoe Koo",
+                "position": "K",
+                "actual_fantasy_points": 4.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.0
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "player_name": "Baltimore",
+                "position": "DEF",
+                "actual_fantasy_points": 4.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.0
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "player_name": "Houston",
+                "position": "DEF",
+                "actual_fantasy_points": 4.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.0
+            },
+            {
+                "team_name": "HockenZYN",
+                "player_name": "Kansas City",
+                "position": "DEF",
+                "actual_fantasy_points": 4.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.0
+            },
+            {
+                "team_name": "Butkers Stay At Home Moms",
+                "player_name": "Christian Kirk",
+                "position": "WR",
+                "actual_fantasy_points": 4.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.0
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "player_name": "Daniel Carlson",
+                "position": "K",
+                "actual_fantasy_points": 4.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.0
+            },
+            {
+                "team_name": "The Sleepy Joes",
+                "player_name": "Amon-Ra St. Brown",
+                "position": "WR",
+                "actual_fantasy_points": 4.3,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.3
+            },
+            {
+                "team_name": "Sanduskys Tight Ends",
+                "player_name": "Jake Ferguson",
+                "position": "TE",
+                "actual_fantasy_points": 4.5,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.5
+            },
+            {
+                "team_name": "HockenZYN",
+                "player_name": "Dalton Schultz",
+                "position": "TE",
+                "actual_fantasy_points": 4.6,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.6
+            },
+            {
+                "team_name": "Obi-Jan Kenobi",
+                "player_name": "Brandon Aiyuk",
+                "position": "WR",
+                "actual_fantasy_points": 4.8,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 4.8
+            },
+            {
+                "team_name": "Alexander's Amazing Team",
+                "player_name": "Buffalo",
+                "position": "DEF",
+                "actual_fantasy_points": 5.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 5.0
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "player_name": "DK Metcalf",
+                "position": "WR",
+                "actual_fantasy_points": 5.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 5.9
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "player_name": "San Francisco",
+                "position": "DEF",
+                "actual_fantasy_points": 6.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 6.0
+            },
+            {
+                "team_name": "HockenZYN",
+                "player_name": "Keenan Allen",
+                "position": "WR",
+                "actual_fantasy_points": 6.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 6.9
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "player_name": "Michael Pittman Jr.",
+                "position": "WR",
+                "actual_fantasy_points": 7.1,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 7.1
+            },
+            {
+                "team_name": "AGREATCHAOS",
+                "player_name": "Tyjae Spears",
+                "position": "RB",
+                "actual_fantasy_points": 7.2,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 7.2
+            },
+            {
+                "team_name": "J.K.K.K. Dobbins",
+                "player_name": "Trey McBride",
+                "position": "TE",
+                "actual_fantasy_points": 8.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 8.0
+            },
+            {
+                "team_name": "you goedert dude",
+                "player_name": "Derrick Henry",
+                "position": "RB",
+                "actual_fantasy_points": 10.6,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 10.6
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "player_name": "Davante Adams",
+                "position": "WR",
+                "actual_fantasy_points": 10.9,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 10.9
+            },
+            {
+                "team_name": "Jonastys Fantasy",
+                "player_name": "Dak Prescott",
+                "position": "QB",
+                "actual_fantasy_points": 11.46,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 11.46
+            },
+            {
+                "team_name": "Danny Dimes's Crack Dealer",
+                "player_name": "Cameron Dicker",
+                "position": "K",
+                "actual_fantasy_points": 12.0,
+                "projected_fantasy_points": 0.0,
+                "points_diff": 12.0
+            }
+        ]
+    }
+}
