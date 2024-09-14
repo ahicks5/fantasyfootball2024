@@ -51,7 +51,7 @@ class YahooFantasyAPI:
         Loads cookies from a pickle file to maintain the session across requests.
         """
         # Load cookies from the file 'yahoo_cookies.pkl'
-        with open("yahoo_cookies.pkl", "rb") as file:
+        with open("archive/yahoo_cookies.pkl", "rb") as file:
             cookies = pickle.load(file)
             for cookie in cookies:
                 cookie['domain'] = ".yahoo.com"  # Ensure cookies are set for the correct domain
