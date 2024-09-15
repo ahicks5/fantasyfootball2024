@@ -10,11 +10,12 @@ def calculate_team_totals(fantasy_data):
     team_totals = {}
     team_names = {}
 
-    for team_id, players in fantasy_data.items():
-        total_points = sum(player["fantasy_points"] for player in players if player["lineup_pos"] != "BN")
-        team_name = players[0]["team_name"]  # Assume all players in a team have the same team_name
-        team_totals[team_id] = total_points
-        team_names[team_id] = team_name
+    for week, teams in fantasy_data.items():  # Iterate over each week
+        for team_id, players in teams.items():
+            total_points = sum(player["fantasy_points"] for player in players if player["lineup_pos"] != "BN")
+            team_name = players[0]["team_name"]  # Assume all players in a team have the same team_name
+            team_totals[team_id] = total_points
+            team_names[team_id] = team_name
 
     return team_totals, team_names
 
@@ -90,7 +91,7 @@ def save_standings_to_json(standings, output_file):
 
 def main():
     # Load data
-    fantasy_data = load_data('league_data_week_1.json')
+    fantasy_data = load_data('league_data_by_week.json')
     schedule_data = load_data('league_schedule_weeks_1_to_14.json')
 
     # Calculate team totals and names
