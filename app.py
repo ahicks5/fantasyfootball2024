@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/analyze', methods=['POST'])
+@app.route('/analyze', methods=['GET', 'POST'])
 def analyze():
     analysis_results = None
     week_num = 1  # Always show stats as of Week 1
@@ -45,6 +45,19 @@ def analyze():
     }
 
     return render_template('analysis.html', analysis=analysis_results)
+
+
+@app.route('/matchup_insights')
+def matchup_insights():
+    standings_file = 'standings.json'
+    if not os.path.exists(standings_file):
+        return "Standings file not found. Please ensure the standings file exists.", 404
+
+    with open(standings_file, 'r') as file:
+        standings = json.load(file)
+
+    return render_template('matchup_insights.html', standings=standings)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

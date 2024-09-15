@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fantasy Football Manager Analysis</title>
+    <title>Degenerates Fantasy Football Manager Analysis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Fantasy Football Manager Analysis</h1>
-        <form action="{{ url_for('analyze') }}" method="POST">
-            <button type="submit">See Stats</button>
-        </form>
+        <div class="button-container">
+            <a href="{{ url_for('analyze') }}" class="btn">Manager Analysis</a>
+            <a href="{{ url_for('matchup_insights') }}" class="btn">Matchup Analysis</a>
+        </div>
     </div>
 </body>
 </html>
