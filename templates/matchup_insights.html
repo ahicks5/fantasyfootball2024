@@ -18,8 +18,8 @@
             text-align: center;
         }
         .container {
-            padding: 20px;
-            max-width: 1200px;
+            padding: 10px;
+            max-width: 100%;
             margin: auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -27,18 +27,25 @@
         h1 {
             text-align: center;
             color: #333;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .table-container {
+            overflow-x: auto; /* Enable horizontal scrolling on small screens */
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin-top: 10px;
+            min-width: 600px; /* Ensure table has a minimum width for readability */
         }
         table, th, td {
             border: 1px solid #ddd;
         }
         th, td {
-            padding: 10px;
+            padding: 8px;
             text-align: center;
+            font-size: 0.9em; /* Adjust font size for mobile */
         }
         th {
             background-color: #4CAF50;
@@ -50,6 +57,20 @@
         tr:hover {
             background-color: #ddd;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            th, td {
+                padding: 6px;
+                font-size: 0.8em;
+            }
+            .container {
+                padding: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,36 +79,38 @@
     </header>
     <div class="container">
         <h1>Week 1 Standings</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Team Name</th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For (PF)</th>
-                    <th>Points Against (PA)</th>
-                    <th>Streak</th>
-                    <th>Expected Wins</th>
-                    <th>Expected Losses</th>
-                </tr>
-            </thead>
-            <tbody id="standings-body">
-                {% for team in standings %}
-                <tr>
-                    <td>{{ team[0] }}</td>
-                    <td>{{ team[1]['wins'] }}</td>
-                    <td>{{ team[1]['losses'] }}</td>
-                    <td>{{ team[1]['ties'] }}</td>
-                    <td>{{ '%.2f' % team[1]['PF'] }}</td>
-                    <td>{{ '%.2f' % team[1]['PA'] }}</td>
-                    <td>{{ team[1]['streak'] }}</td>
-                    <td>{{ '%.2f' % team[1]['expected_wins'] }}</td>
-                    <td>{{ '%.2f' % team[1]['expected_losses'] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Ties</th>
+                        <th>Points For (PF)</th>
+                        <th>Points Against (PA)</th>
+                        <th>Streak</th>
+                        <th>Expected Wins</th>
+                        <th>Expected Losses</th>
+                    </tr>
+                </thead>
+                <tbody id="standings-body">
+                    {% for team in standings %}
+                    <tr>
+                        <td>{{ team[0] }}</td>
+                        <td>{{ team[1]['wins'] }}</td>
+                        <td>{{ team[1]['losses'] }}</td>
+                        <td>{{ team[1]['ties'] }}</td>
+                        <td>{{ '%.2f' % team[1]['PF'] }}</td>
+                        <td>{{ '%.2f' % team[1]['PA'] }}</td>
+                        <td>{{ team[1]['streak'] }}</td>
+                        <td>{{ '%.2f' % team[1]['expected_wins'] }}</td>
+                        <td>{{ '%.2f' % team[1]['expected_losses'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
