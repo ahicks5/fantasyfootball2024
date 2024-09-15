@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Analysis Results - Week {{ analysis.week_num }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- Include Chart.js for charts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -118,7 +117,7 @@
                 </div>
             </div>
 
-            <!-- Average Percent Difference Section -->
+            <!-- Average Percent Difference Between Actual and Projected Points Section -->
             <div class="section">
                 <h2>Average Percent Difference Between Actual and Projected Points</h2>
                 <p>
@@ -238,9 +237,9 @@
                 }
 
                 // Function to render chart
-                function renderChart(ctxId, chartData, options) {
-                    const ctx = document.getElementById(ctxId).getContext('2d');
-                    new Chart(ctx, {
+                function renderChart(canvasId, chartData, options) {
+                    const context = document.getElementById(canvasId).getContext('2d');
+                    new Chart(context, {
                         type: 'bar',
                         data: chartData,
                         options: Object.assign({

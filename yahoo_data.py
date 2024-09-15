@@ -126,7 +126,7 @@ def main():
     yahoo_api = YahooFantasyAPI()
     league_id = "22030"
     start_week = 1
-    end_week = 2
+    end_week = 1
     filename = 'league_data_by_week.json'
 
     for week_num in range(start_week, end_week + 1):

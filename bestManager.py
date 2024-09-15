@@ -32,18 +32,24 @@ class FantasyLeagueAnalyzer:
         """
         Processes the raw data to structure it per team for easier analysis.
         """
-        for team_id, players in self.data.items():
-            team_name = players[0]['team_name']
-            self.teams[team_id] = {
-                'team_name': team_name,
-                'players': players,
-                'lineups': {
-                    'chosen': [],
-                    'optimal_projected': [],
-                    'optimal_actual': []
-                },
-                'metrics': {}
-            }
+        for week, teams in self.data.items():
+            for team_id, players in teams.items():
+                if not players:
+                    raise ValueError(f"No player data found for team ID {team_id} in week {week}.")
+                team_name = players[0]['team_name']
+                if team_id not in self.teams:
+                    self.teams[team_id] = {
+                        'team_name': team_name,
+                        'players': [],
+                        'lineups': {
+                            'chosen': [],
+                            'optimal_projected': [],
+                            'optimal_actual': []
+                        },
+                        'metrics': {}
+                    }
+                # Aggregate players across all weeks
+                self.teams[team_id]['players'].extend(players)
 
     def calculate_optimal_lineup(self, team_id, use_projection=True):
         """
